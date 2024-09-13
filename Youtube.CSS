@@ -2,13 +2,13 @@ body {
     background-color: rgb(89 37 48);
 }
 
-/* Blurs the background */
 img{
     filter: blur(5px);
     -webkit-filter: blur(8px);
     width: 100%;
     height: 100%;
 }
+
 
 h1 {
     text-align: center;
@@ -25,17 +25,20 @@ h1 {
     filter: drop-shadow(10px 10px 4px #474747);
 }
 
-details{
-    text-align: center;
-    margin-top: -510px;
-    
+.Desc{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: -510px;
 }
-
 .Menu{
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 10px;
+    position: relative;
+    top: -510px;
+    
 }
 
 footer{
