@@ -41,6 +41,14 @@ h1 {
     
 }
 
+.Auto{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: -510px;
+}
+
 footer{
     width: 100%;
     position: absolute;
