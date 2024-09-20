@@ -8,7 +8,7 @@ Key components
 
 <!-- Your video element should include class name, id and name attribute -->
 
-<!-- Add a toggle that will allow user toggle videos auto-play on or off  -->
+<!-- Add a toggle that will allow user toggle videos auto-play on or off 
 
-Add a dropbox box that allows users to select different categories of videos 
+Add a dropbox box that allows users to select different categories of videos  -->
 
