@@ -9,7 +9,6 @@ img{
     height: 100%;
 }
 
-
 h1 {
     text-align: center;
     position: relative;
@@ -32,6 +31,7 @@ h1 {
     position: relative;
     top: -510px;
 }
+
 .Menu{
     align-items: center;
     justify-content: center;
