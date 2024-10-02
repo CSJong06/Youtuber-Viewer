@@ -1,0 +1,96 @@
+
+/* Grid Container */
+body{
+    background-color: #F0EBD8;
+    color: #2f303a;
+}
+
+
+main {
+    display: grid;
+    grid-template-areas:
+        "theme topbar misc"
+        "menu content sidebar"
+        "footer footer footer";
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto 200px ;
+    gap: 0 50px;
+}
+
+/* Grid Items */
+
+.header{ 
+    grid-area: topbar;
+    display: flex;
+    justify-content: center;
+}
+
+.theme{
+    grid-area: theme;
+}
+
+.menu {
+    grid-area: menu;
+    align-items: baseline;
+    justify-content: center;
+    display: flex;
+    position: relative;
+
+}
+
+/* dropdown button initial position */
+ 
+
+.choices button {
+    display: block;
+    width: 125px;
+    
+}
+
+.content{
+    display: none;
+    background-color: white;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+/* dropdown button after hover */
+.dropdown:hover .content{
+    display: block;
+    position: absolute;
+    
+}
+
+/* Video */
+.video { 
+    grid-area: content; 
+    filter: drop-shadow(10px 10px 4px #474747); 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.background {
+    grid-area: content;
+    filter: blur(5px);
+    justify-content: center;
+    display: flex;
+    height: 400px;
+}
+
+/* Description */
+.desc{ 
+    grid-area: sidebar; 
+    position: relative;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+

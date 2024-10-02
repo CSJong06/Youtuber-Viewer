@@ -3,20 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Songs</title>
-    <link href="yt.css" rel="stylesheet" type="text/css">
+    <link href="index.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body id="colorStyle">
     <main>
         <!-- Background -->
-        <div class="background"></div>
+        <div class="background">
+            <img id="background"src="https://i.ytimg.com/vi/U3Ouq3IloKA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-tlFO5XlchpYvKlSSXN02jpdztQ">
+        </div>
 
         <!-- Header -->
-        <h2>Nothing to say - Seldon</h2>
+         <div class="header">
+            <h2 id="title">Nothing to say - Seldon</h2>
+        </div>
+
+        <!-- Theme switcher -->
+        <div class="theme">
+            <button onclick="themeSwitch()" id="theme">Theme: Dark</button>
+        </div>
 
         <!-- Content -->
-        <div class="Video">
+        <div class="video">
             <iframe
+            id="videoFrame"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/U3Ouq3IloKA?si=Sx7MPwl8wAVMLQ3U"
@@ -27,25 +37,26 @@
             ></iframe></div>
 
         <!-- Menu -->
-        <div class="Menu"> <!--All items contained will display on the menu section of the grid-->
+        <div class="menu"> <!--All items contained will display on the menu section of the grid-->
             <div class="dropdown"> <!--Dropdown menu-->
-                <button>Songs</button>
-            
-                <div class="content">
-                    <a href="index.html">Nothing To Say</a> <!--Song 1 link-->
-                    <a href="yt2.html">Valentine</a> <!--Song 2 link-->
-                    <a href="yt3.html">Rambling</a> <!--Song 3 link-->                
+                <button onclick="show()" id="dropBtn">Songs</button>
+                <div id="songChoices" class="choices">
+                    <button onclick="nSwitch()">Nothing to say</button>
+                    <button onclick="vSwitch()">Valentine</button>
+                    <button onclick="rSwitch()">Rambling</button>
                 </div>
             </div>
         </div>
 
         <!-- Description -->
-        <div class="Desc">
+        <div class="desc">
             <details> <!--Container for the description-->
                 <summary>Description</summary>
-                <p>"Nothing to say" by <strong>Seldon</strong> Jul 31, 2024</p> <!--Text that's inside-->
+                <p id="desc">"Nothing to say" by Seldon Jul 31, 2024</p> <!--Text that's inside-->
             </details>
         </div>
+
+        <script src="index.js"></script>
 
         <!-- Footer -->
         <footer><a href="#">Temp Link</a></footer>
