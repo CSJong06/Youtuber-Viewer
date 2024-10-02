@@ -1,8 +1,15 @@
+
 /* Grid Container */
+body{
+    background-color: #F0EBD8;
+    color: #2f303a;
+}
+
+
 main {
     display: grid;
     grid-template-areas:
-        "topbar topbar topbar"
+        "theme topbar misc"
         "menu content sidebar"
         "footer footer footer";
     
@@ -13,10 +20,18 @@ main {
 
 /* Grid Items */
 
-h2 { grid-area: topbar; text-align: center; position: relative;}
+.header{ 
+    grid-area: topbar;
+    display: flex;
+    justify-content: center;
+}
+
+.theme{
+    grid-area: theme;
+}
 
 .menu {
-    
+    grid-area: menu;
     align-items: baseline;
     justify-content: center;
     display: flex;
@@ -24,17 +39,13 @@ h2 { grid-area: topbar; text-align: center; position: relative;}
 
 }
 
-.dropdown button{
-    cursor: pointer;
-    padding: 10px 15px;
-    position: absolute;
-}
+/* dropdown button initial position */
+ 
 
-.dropdown a{
+.choices button {
     display: block;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+    width: 125px;
+    
 }
 
 .content{
@@ -44,25 +55,37 @@ h2 { grid-area: topbar; text-align: center; position: relative;}
 
 }
 
+/* dropdown button after hover */
 .dropdown:hover .content{
     display: block;
     position: absolute;
     
 }
 
-
-.Video { 
+/* Video */
+.video { 
     grid-area: content; 
     filter: drop-shadow(10px 10px 4px #474747); 
     align-items: center;
     justify-content: center;
     display: flex;
 }
-.Desc{ 
+
+.background {
+    grid-area: content;
+    filter: blur(5px);
+    justify-content: center;
+    display: flex;
+    height: 400px;
+}
+
+/* Description */
+.desc{ 
     grid-area: sidebar; 
     position: relative;
 }
 
+/* Footer */
 footer {
     grid-area: footer;
     width: 100%;
@@ -71,16 +94,3 @@ footer {
     text-align: center;
 }
 
-
-.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(https://i.ytimg.com/vi/tyKu0uZS86Q/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhlIFooTzAP&rs=AOn4CLBYpwLzkGb3918E7emY28fMhtZthw);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    filter: blur(5px);
-}
