@@ -1,24 +1,32 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music by Seldon</title>
-    <link href="Youtube.CSS" rel="stylesheet" type="text/css"
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Songs</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+</head>
 
-  <body>
-    
-    <!-- Background -->
-    <img src="https://i.ytimg.com/vi/U3Ouq3IloKA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-tlFO5XlchpYvKlSSXN02jpdztQ">
-    
+<body id="colorStyle">
     <main>
-        
-        <!-- Title -->
-        <h1>Nothing to say - Seldon</h1>
-        
-        <!-- Video -->
-        <div class="Video">
+        <!-- Background -->
+        <div class="background">
+            <img id="background"src="https://i.ytimg.com/vi/U3Ouq3IloKA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-tlFO5XlchpYvKlSSXN02jpdztQ">
+        </div>
+
+        <!-- Header -->
+         <div class="header">
+            <h2 id="title">Nothing to say - Seldon</h2>
+        </div>
+
+        <!-- Theme switcher -->
+        <div class="theme">
+            <button onclick="themeSwitch()" id="theme">Theme: Dark</button>
+        </div>
+
+        <!-- Content -->
+        <div class="video">
             <iframe
+            id="videoFrame"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/U3Ouq3IloKA?si=Sx7MPwl8wAVMLQ3U"
@@ -26,34 +34,32 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
-            ></iframe>
+            ></iframe></div>
+
+        <!-- Menu -->
+        <div class="menu"> <!--All items contained will display on the menu section of the grid-->
+            <div class="dropdown"> <!--Dropdown menu-->
+                <button onclick="show()" id="dropBtn">Songs</button>
+                <div id="songChoices" class="choices">
+                    <button onclick="nSwitch()">Nothing to say</button>
+                    <button onclick="vSwitch()">Valentine</button>
+                    <button onclick="rSwitch()">Rambling</button>
+                </div>
+            </div>
         </div>
 
         <!-- Description -->
-        <div class="Desc">
+        <div class="desc">
             <details> <!--Container for the description-->
                 <summary>Description</summary>
-                <p>"Nothing to say" by <strong>Seldon</strong> Jul 31, 2024</p> <!--Text that's inside-->
+                <p id="desc">"Nothing to say" by Seldon Jul 31, 2024</p> <!--Text that's inside-->
             </details>
-       </div>
+        </div>
 
-       <!-- Menu -->
-       <div class="Menu">
-            <select> <!--Container for a multi-select menu-->
-                <option>Nothing to say</option> <!--Song 1-->
-                <option>I still want you</option> <!--Song 2-->
-            </select>
-        </div>
-        <!-- Auto Play toggle -->
-        <div class="Auto"> Auto Play
-          <input type="checkbox" checked="checked">
-        </div>
+        <script src="index.js"></script>
+
+        <!-- Footer -->
+        <footer><a href="#">Temp Link</a></footer>
     </main>
-
-  </body>
-
-  <footer>
-    <a href="#">Temp Link</a>
-  </footer>
-
+</body>
 </html>
