@@ -14,23 +14,33 @@ let state = 0
 function themeSwitch(){
     const light = 0 //light mode is represented as a 0 (default)
     const dark = 1 //dark mode is represented as a 1
+    const maroon = 2
 
     if (state === light) { //if the button is clicked, and state is equal to light: 
         colorStyle.style.backgroundColor=('#0e1a26'); //the background will switch to dark
         colorStyle.style.color=('#F0EBD8'); //the text will switch for better readablity
-        theme.innerText=('Theme: Light');
-
-        state += 1; //and the state increases by 1 (making the state equal to dark)
-    }
-
-    else if (state === dark) { //same thing in reverse
-        colorStyle.style.backgroundColor=('#F0EBD8');
-        colorStyle.style.color=('#0e1a26');
         theme.innerText=('Theme: Dark');
 
-        state -= 1; //state decreases back to 0 
+        state = 1; //and the state increases by 1 (making the state equal to dark)
     }
-    
+
+
+    else if (state === dark) { //same thing in reverse
+        colorStyle.style.backgroundColor=('#4e1407');
+        colorStyle.style.color=('#ffa7a1');
+        theme.innerText=('Theme: Maroon');
+
+        state = 2; //state decreases back to 0 
+    }
+
+    else if (state == maroon) {
+        colorStyle.style.backgroundColor=('#F0EBD8');
+        colorStyle.style.color=('#0e1a26');
+        theme.innerText=('Theme: Light');
+
+        state = 0; //state decreases back to 0
+    }
+
 }
 
 
