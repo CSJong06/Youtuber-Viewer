@@ -1,3 +1,4 @@
+// linking the buttons to the js
 let songChoices = document.getElementById('songChoices');
 let videoFrame = document.getElementById('videoFrame');
 let background = document.getElementById('background')
@@ -5,38 +6,43 @@ let title = document.getElementById('title')
 let desc = document.getElementById('desc')
 let colorStyle = document.getElementById('colorStyle')
 let theme = document.getElementById("theme")
+
+
+// 'state of the website' starts at 0
 let state = 0
 
 function themeSwitch(){
-    const light = 0
-    const dark = 1
+    const light = 0 //light mode is represented as a 0 (default)
+    const dark = 1 //dark mode is represented as a 1
 
-    if (state === light) {
-        colorStyle.style.backgroundColor=('#0e1a26');
-        colorStyle.style.color=('#F0EBD8');
+    if (state === light) { //if the button is clicked, and state is equal to light: 
+        colorStyle.style.backgroundColor=('#0e1a26'); //the background will switch to dark
+        colorStyle.style.color=('#F0EBD8'); //the text will switch for better readablity
         theme.innerText=('Theme: Light');
 
-        state += 1;
+        state += 1; //and the state increases by 1 (making the state equal to dark)
     }
 
-    else if (state === dark) {
+    else if (state === dark) { //same thing in reverse
         colorStyle.style.backgroundColor=('#F0EBD8');
         colorStyle.style.color=('#0e1a26');
         theme.innerText=('Theme: Dark');
 
-        state -= 1;
+        state -= 1; //state decreases back to 0 
     }
     
 }
 
 
-function show(){
+function show(){ //this function changes the display of the song choices
     if (songChoices.style.display === "none") {
         songChoices.style.display = "block";
     } else {
       songChoices.style.display = "none";
     }
 }
+
+//these functions work by grabbing the ids of certain elements and inserting new values
 
 function nSwitch(){
     videoFrame.setAttribute('src', 'https://www.youtube.com/embed/U3Ouq3IloKA?si=Sx7MPwl8wAVMLQ3U')

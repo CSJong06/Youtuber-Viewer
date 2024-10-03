@@ -5,7 +5,7 @@ body{
     color: #2f303a;
 }
 
-
+/* Grid template to place elements */
 main {
     display: grid;
     grid-template-areas:
@@ -26,10 +26,12 @@ main {
     justify-content: center;
 }
 
+/* placement of theme button */
 .theme{
     grid-area: theme;
 }
 
+/* placement of menu */
 .menu {
     grid-area: menu;
     align-items: baseline;
@@ -39,27 +41,18 @@ main {
 
 }
 
-/* dropdown button initial position */
- 
-
+/* display block to align items in a column */
 .choices button {
     display: block;
     width: 125px;
     
 }
 
+/* dop shadow */
 .content{
-    display: none;
     background-color: white;
     box-shadow: 5px 5px 5px black;
 
-}
-
-/* dropdown button after hover */
-.dropdown:hover .content{
-    display: block;
-    position: absolute;
-    
 }
 
 /* Video */
@@ -71,6 +64,7 @@ main {
     display: flex;
 }
 
+/* blurred backdrop */
 .background {
     grid-area: content;
     filter: blur(5px);
