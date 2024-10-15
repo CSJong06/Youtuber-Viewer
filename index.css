@@ -9,8 +9,8 @@ body{
 main {
     display: grid;
     grid-template-areas:
-        "theme topbar misc"
-        "menu content sidebar"
+        "topbar topbar topbar"
+        "settings content sidebar"
         "footer footer footer";
     
     grid-template-columns: 1fr 1fr 1fr;
@@ -26,27 +26,51 @@ main {
     justify-content: center;
 }
 
-/* placement of theme button */
-.theme{
-    grid-area: theme;
+.sPanel {
+    outline-color: #2f303a;
+    outline-width: 5px;
+    outline-style: solid;
+    border-radius: 10px;
+    width: 150px;
+    max-height: max-content;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #2f303a;
 }
 
-/* placement of menu */
-.menu {
-    grid-area: menu;
-    align-items: baseline;
-    justify-content: center;
-    display: flex;
-    position: relative;
+.sPanel button {
+    width: 150px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 50px;
+    background-color: #e7dbb1;
+}
+
+.sPanel p {
+    color: #F0EBD8;
+    text-align: center;
+}
+
+
+.name, .email{
+    width: 150px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 50px;
+}
+
+.userSet button{
+    background-color: rgb(201, 207, 240);
 
 }
+
 
 /* display block to align items in a column */
 .choices button {
     display: block;
-    width: 125px;
-    
+    background-color: #ffff;
 }
+
 
 /* dop shadow */
 .content{

@@ -18,10 +18,46 @@
             <h2 id="title">Nothing to say - Seldon</h2> <!--Grabbing this id allows js to switch the title-->
         </div>
 
-        <!-- Theme switcher -->
-        <div class="theme">
-            <button onclick="themeSwitch()" id="theme">Theme: Light</button> <!--when the button is clicked, it runs the theme switch function-->
+        <!-- Settings Panel -->
+        <div id="sPanel" class="sPanel">
+
+            <p id="setDisplay">Settings</p>
+
+            <!-- Theme switcher -->
+            <div class="theme">
+                <button onclick="themeSwitch()" id="theme">Theme: Light</button> <!--when the button is clicked, it runs the theme switch function-->
+            </div>      
+
+            <!-- Menu -->
+            <div class="menu"> <!--All items contained will display on the menu section of the grid-->
+                <div class="dropdown"> <!--Dropdown menu-->
+                    <button onclick="shwSong()" id="dropBtn">Songs</button> <!--This button toggles whether the choices are shown or not-->
+                    <div id="songChoices" class="choices">
+                        <button id="nBtn" onclick="nSwitch()">Nothing to say</button> <!--the buttons run the respective function to switch the song-->
+                        <button id="vBtn" onclick="vSwitch()">Valentine</button>
+                        <button id="rBtn" onclick="rSwitch()">Rambling</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User form -->
+            <div>
+                <button id="userSet" onclick="shwUser()">User Settings</button>
+                <div class="userSet" id="userBtns">
+                    
+                    <input id="name" class="name" type="text" placeholder="Name">
+                    <input id="email" class="email" type="text" placeholder="Email">
+                    <button class="submitBtn" id="submitBtn" onclick="store_userSet()">submit</button> <!--allows the information to be stored on click-->
+                </div>
+            </div>
+
+            <!-- hide button -->
+            <div>
+                <button id="hideBtn" onclick="setView()">Hide</button>
+            </div>
+
         </div>
+        
 
         <!-- Content -->
         <div class="video">
@@ -36,17 +72,6 @@
             allowfullscreen
             ></iframe></div>
 
-        <!-- Menu -->
-        <div class="menu"> <!--All items contained will display on the menu section of the grid-->
-            <div class="dropdown"> <!--Dropdown menu-->
-                <button onclick="show()" id="dropBtn">Songs</button> <!--This button toggles whether the choices are shown or not-->
-                <div id="songChoices" class="choices">
-                    <button onclick="nSwitch()">Nothing to say</button> <!--the buttons run the respective function to switch the song-->
-                    <button onclick="vSwitch()">Valentine</button>
-                    <button onclick="rSwitch()">Rambling</button>
-                </div>
-            </div>
-        </div>
 
         <!-- Description -->
         <div class="desc">
