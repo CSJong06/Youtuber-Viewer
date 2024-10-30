@@ -1,0 +1,58 @@
+body{
+    background-color: #e7daa8;
+    
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "topbar topbar topbar"
+        "settings content sidebar"
+        "footer footer footer";
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto 200px ;
+    gap: 0 50px;
+}
+
+.logMenu{
+    grid-area: content;
+    background-color: #2f303a;
+    outline-width: 2px;
+    outline-style: solid;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.logMenu input, button{
+    border-radius: 20px;
+    text-align: right;
+    width: 150px;
+    height: 35px;
+    margin: 10px;
+}
+
+.logInfo input, button{
+    width: 320px;
+    padding: 10px;
+}
+
+.logInfo button{
+    text-align: center;
+    cursor: pointer;
+}
+
+.errorText{
+    text-align: right;
+    padding-right: 15px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    color: #cc0000;
+    display: none;
+}
+
+.returnBtn button{
+    width: 100px;
+    display: none;
+}

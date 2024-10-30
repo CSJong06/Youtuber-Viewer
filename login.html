@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <main>
+    <div class="logMenu">
+      <div class="logInfo">
+        <div class = "name">
+          <input id="uName" placeholder="Name"> 
+          <p class="errorText" id="nameError">Name must be 4 characters or longer</p>
+        </div>
+
+        <div>
+          <input id="email" placeholder="Email">
+        </div>
+
+        <div>
+          <input id="pWord" placeholder="Password">
+        </div>
+
+        <div>
+          <button id="subBtn" onclick="save()">Submit</button> <!--save function on click-->
+        </div>
+
+        <div class="returnBtn">
+          <button id="returnBtn" onclick="save()"><a href="index.html">return</a></button> <!--return to home page-->
+        </div>
+      </div>
+       
+    </div>
+
+  <script src="login.js"></script>  
+  </main>
+</body>
+</html>

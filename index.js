@@ -12,8 +12,7 @@ let sPanel = document.getElementById("sPanel");
 let nBtn = document.getElementById('nBtn');
 let vBtn = document.getElementById('vBtn');
 let rBtn = document.getElementById('rBtn');
-let name = document.getElementById('name');
-let email = document.getElementById('email');
+
 let submitBtn = document.getElementById('submitBtn');
 
 // initializes the state as 0
@@ -43,14 +42,13 @@ function setView() {
         hideBtn.style.fontSize = "10px";
         sPanel.style.maxWidth = "max-content";
         nBtn.style.display = "none";
-    vBtn.style.display = "none";
-    rBtn.style.display = "none";
-    name.style.display = "none";
-    email.style.display = "none";
-    submitBtn.style.display = "none";
+        vBtn.style.display = "none";
+        rBtn.style.display = "none";
+        
+        submitBtn.style.display = "none";
     
-    menuState = hidden
-}
+        menuState = hidden
+    }
 
 // if the value of the menu state is equal to the value of hidden;
 else if (menuState === hidden){
@@ -65,8 +63,6 @@ else if (menuState === hidden){
     nBtn.style.display = "block";
     vBtn.style.display = "block";
     rBtn.style.display = "block";
-    name.style.display = "block";
-    email.style.display = "block";
     submitBtn.style.display = "block";
     
     menuState = shown
@@ -75,11 +71,6 @@ else if (menuState === hidden){
 
 }
 
-// stores the two values on click
-function store_userSet(){
-    localStorage.setItem('name', name.value)
-    localStorage.setItem('email', email.value)
-}
 
 // sets the user setting buttons as hidden by default
 userBtns.style.display = "none";
